@@ -1,0 +1,243 @@
+@import url(/animation.css);
+
+/* Body Styles */
+body {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+}
+
+/* Wrapper for the entire content */
+.div__body-bg {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+}
+
+/* Section: Intro */
+.sect__intro {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  position: relative;
+  margin-bottom: -5rem;
+}
+
+.img-bg {
+  position: absolute;
+  width: 100%;
+  height: 90%;
+  background-size: cover;
+  background-position: center;
+  z-index: -2;
+}
+
+.img__bg-intro {
+  display: flex;
+  margin-bottom: -5rem;
+}
+
+.svg__intro {
+  width: 100%;
+}
+
+/* Soda bubbles background */
+.bg_soda-ctrl {
+  width: 100%;
+  position: relative;
+  z-index: -6;
+  margin-top: -3rem;
+}
+
+.bg_soda {
+  display: flex;
+  position: relative;
+  height: 30rem;
+  width: 100%;
+  background-image: url(/bg_soda.png);
+  background-size: auto;
+  background-repeat: repeat-x repeat-y;
+  z-index: -2;
+}
+
+/* Intro text and soda image */
+.txt_intro {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0 2rem;
+}
+
+.div__intro {
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  align-items: center;
+}
+
+.img__soda {
+  height: 8rem;
+  width: 4rem;
+  -webkit-animation: wobble-hor-bottom 1.4s 5s both infinite;
+  animation: wobble-hor-bottom 1.4s 5s both infinite;
+}
+
+/* Section: SVG 01 */
+.graph__svg-01 {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  margin-top: 1rem;
+  z-index: 2;
+}
+
+.graph__container-svg-01 {
+  display: flex;
+  height: 100rem;
+  width: 100%;
+}
+
+/* Section: Bar Graph */
+.graph__bar-ver-01 {
+  display: flex;
+  width: 100%;
+}
+
+.bg_ice_ctrl{
+  position: relative;
+  z-index: -3;
+  top: -55vh;
+}
+
+.bg__ice {
+  background-repeat: repeat-x;
+  width: 100vw;
+}
+
+.img__bg-bar-ver-01{
+  display: flex;
+  top: 168vh;
+  z-index: -4;
+}
+
+.graph__container-bar {
+  display: flex;
+  width: 100%;
+}
+
+/* Media Queries for larger screens */
+@media screen and (min-width: 768px) {
+  .txt_intro {
+    flex-direction: row-reverse;
+    align-items: center;
+    gap: 10rem;
+  }
+  .graph__svg-01{
+    margin-top: -25px;
+  }
+  h1{
+    display: flex;
+    justify-content: baseline;
+  }
+  .img__bg-bar-ver-01{
+    display: flex;
+    top: 170vh;
+    z-index: -4;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .txt_intro {
+    flex-direction: row-reverse;
+    align-items: center;
+    gap: 10rem;
+  }
+  .graph__svg-01{
+    margin-top: -15px;
+  }
+  .img__bg-intro{
+    height: 100%;
+    top: -5rem;
+  }
+  .img__bg-bar-ver-01{
+    display: flex;
+    top: 101rem;
+    z-index: -4;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .txt_intro {
+    flex-direction: column;
+    align-items: center;
+    gap: 10rem;
+  }
+  .sect__intro{
+    height: 60rem;
+  }
+  .bg_soda-ctrl {
+    width: 100%;
+    position: relative;
+    z-index: -6;
+    top: 2rem;
+  }
+  .graph__svg-01{
+    position: relative;
+    margin-top: 0rem;
+    
+  }
+  .img__bg-intro{
+    height: 100%;
+    margin-bottom: 15rem;
+  }
+  .bg_ice_ctrl{
+    position: relative;
+    z-index: -3;
+    top: -25rem;
+  }
+  .img__bg-bar-ver-01{
+    display: flex;
+    top: 140rem;
+    z-index: -4;
+  }
+}
+
+@media screen and (min-width: 1536px) {
+  .txt_intro {
+    flex-direction: column;
+    align-items: center;
+    gap: 10rem;
+    max-width: 60%;
+    text-align: center;
+  }
+  .div__intro{
+    width: 90%;
+    justify-content: center;
+  }
+  .sect__intro{
+    align-items: center;
+    height: 160vh;
+  }
+  .bg_soda-ctrl {
+    width: 100%;
+    position: relative;
+    z-index: -6;
+    top: 20rem;
+  }
+  .graph__svg-01{
+    position: relative;
+    margin-top: 6rem;
+  }
+  .img__bg-intro{
+    height: 100%;
+    margin-bottom: 15rem;
+  }
+  .img__bg-bar-ver-01{
+    display: flex;
+    top: 170rem;
+    z-index: -4;
+  }
+}
