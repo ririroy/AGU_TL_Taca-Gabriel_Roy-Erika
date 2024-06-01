@@ -1,5 +1,7 @@
 @import url(/animation.css);
 
+
+
 /* Body Styles */
 body {
   margin: 0;
@@ -90,45 +92,80 @@ body {
   display: flex;
   width: 100%;
   height: 100%;
-  margin-top: 1rem;
+  margin-top: -1rem;
   z-index: 2;
 }
 
 .graph__container-svg-01 {
   display: flex;
-  height: 100rem;
-  width: 100%;
+  height: 57rem;
+  width: 80rem;
 }
 
 /* Section: Bar Graph */
 .graph__bar-ver-01 {
   display: flex;
   width: 100%;
+  flex-direction: column;
+}
+
+.blq__bar{
+  width: 50%;
+  height: fit-content;
+
 }
 
 .bg_ice_ctrl{
-  position: relative;
   z-index: -3;
-  top: -55vh;
 }
 
 .bg__ice {
   background-repeat: repeat-x;
-  width: 100vw;
+  width: 100%;
 }
 
 .img__bg-bar-ver-01{
   display: flex;
-  top: 168vh;
   z-index: -4;
 }
 
-.graph__container-bar {
-  display: flex;
-  width: 100%;
+
+#chart-container{
+z-index: 4;
+  height: 40vh;
+  width: 40vw;
+  top: 10vh;
 }
 
-/* Media Queries for larger screens */
+#chart-container2{
+  height: 600px;
+  width: 600px;
+}
+
+
+/* Section demi cercle */
+
+.graph__semi-circ-01{
+  display: flex;
+  width: 100%;
+  margin-top: 45rem;
+}
+
+.bg_goupilles{
+  display: flex;
+  position: absolute;
+  top: 176rem;
+  width: 100%;
+  height: auto;
+  z-index: -5;
+}
+
+.bg__semi-circ{
+  width: 100%;
+  display: flex;
+}
+
+/* Media Queries for larger screens 
 @media screen and (min-width: 768px) {
   .txt_intro {
     flex-direction: row-reverse;
@@ -141,6 +178,9 @@ body {
   h1{
     display: flex;
     justify-content: baseline;
+  }
+  .bg_ice_ctrl {
+  top: -59vh;
   }
   .img__bg-bar-ver-01{
     display: flex;
@@ -164,7 +204,7 @@ body {
   }
   .img__bg-bar-ver-01{
     display: flex;
-    top: 101rem;
+    top: 120rem;
     z-index: -4;
   }
 }
@@ -198,10 +238,9 @@ body {
     z-index: -3;
     top: -25rem;
   }
-  .img__bg-bar-ver-01{
+  .graph__bar-ver-01{
     display: flex;
-    top: 140rem;
-    z-index: -4;
+    top: 130rem;
   }
 }
 
@@ -229,15 +268,21 @@ body {
   }
   .graph__svg-01{
     position: relative;
-    margin-top: 6rem;
+    top: -45rem;
+
   }
   .img__bg-intro{
-    height: 100%;
+    height: 100vh;
     margin-bottom: 15rem;
+  }
+  .bg_ice_ctrl{
+    position: relative;
+    z-index: -3;
+    top: -110vh;
   }
   .img__bg-bar-ver-01{
     display: flex;
     top: 170rem;
     z-index: -4;
   }
-}
+}*/
