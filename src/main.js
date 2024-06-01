@@ -4,8 +4,32 @@
 
 window.onload = function () {
 
+    // GRAPH 1
+    pieData= [43.7,7.3,19.9,7.6,21.5];
 
+    new RGraph.SVG.Pie({
+        id: 'graph1-container',
+        data: pieData,
+        options: {
+            labels: ['Eau','Jus','Boissons gazeuses','Autres', 'Lait'],
+            shadow: true,
+            colorsStroke: 'rgba(0,0,0,1)',
+            linewidth: 0,
+            exploded: [,,25],
+            colors: ['#81B29A','#F4F1DE','#3D405B','#E07A5F','#fcc','#F2CC8F'],
+            tooltips: '%{key}',
+            tooltipsFormattedKeyLabels: ['Eau,','Jus','Boissons gazeuses','Autres','Lait'],
+            tooltipsFormattedUnitsPost: '%',
+            tooltipsCss: {
+                backgroundColor: '#333',
+                fontWeight: 'bold',
+                fontSize: '14pt',
+                opacity: 0.85
+            }
+        }
+    }).draw();
 
+// fin graph 1
 
     
     var graphData = [

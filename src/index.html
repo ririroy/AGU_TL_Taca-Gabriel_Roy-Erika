@@ -12,11 +12,11 @@
     <div class="div__body-bg">
         <main>
             <section class="sect__intro">
-                <div class="img__bg-intro img-bg" style="background-image: url(/bg_intro.png);"></div>
+                <div class="img__bg-intro img-bg" style="background-image: url(public/bg_intro.png);"></div>
                 <div class="div__intro">
                     <h1>Les Américains et leur passion pour les sodas</h1>
                     <div class="txt_intro">
-                        <img class="img__soda" src="/soda_can.png" alt="Cannette tournante">
+                        <img class="img__soda" src="public/soda_can.png" alt="Cannette tournante">
                         <div>
                             <p>Aux États-Unis, la consommation de soda est profondément ancrée dans la culture et le
                                 mode de vie des
@@ -66,16 +66,24 @@
             </section>
 
             <section class="graph__svg-01">
-                <div class="img-bg" style="background-image: url(/bg_SVG-01.png);"></div>
-                <div class="graph__container-svg-01"></div>
+                <div class="img-bg" style="background-image: url(public/bg_SVG-01.png);"></div>
+                <div class="graph__container-svg-01">
+                    <!-- Graph 1-->
+                    <div>
+                        <canvas id="cvs" width="350" height="350">[No canvas support]</canvas>
+                    </div>
+                    <div style="float: right">
+                        <div style="width: 700px; height: 300px; display: inline-block; background-color: transparent" id="graph1-container"></div>
+                    </div>
+                </div>
             </section>
 
             <section class="graph__bar-ver-01">
                 <div class="bg_ice_ctrl">
-                    <img class="bg__ice" src="/bg_ice.png" style="background-repeat:repeat-y"
+                    <img class="bg__ice" src="public/bg_ice.png" style="background-repeat:repeat-y"
                         alt="image de cubes de glace">
                 </div>
-                <div class="img__bg-bar-ver-01 img-bg" style="background-image: url(/bg_bar-ver-01.png);">
+                <div class="img__bg-bar-ver-01 img-bg" style="background-image: url(public/bg_bar-ver-01.png);">
                     <blockquote class="blq__bar">
                         <h2>Tendances récentes – Consommation de boissons gazeuses par habitant</h2>
                         <p>
@@ -115,7 +123,7 @@
             </section>
             <section class="graph__semi-circ-01">
                 <img class="bg_goupilles" src="./public/bg_goupille.png" alt="fond de goupilles de cannettes">
-                <img class="bg__semi-circ" src="/bg_demi-circle.png" alt="Fond rouge">
+                <img class="bg__semi-circ" src="public/bg_demi-circle.png" alt="Fond rouge">
                 <div>
                 <div class="graph__semi-circ">
 
@@ -129,6 +137,7 @@
     </div>
     <script src="./RGraph.svg.common.core.js"></script>
     <script src="./RGraph.svg.common.tooltips.js"></script>
+    <script src="./RGraph.svg.pie.js"></script>
     <script src="./RGraph.svg.bar.js"></script>
     <script src="./RGraph.svg.activity.js"></script>
     <script src="./main.js"></script>
