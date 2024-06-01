@@ -3,6 +3,11 @@
 
 
 window.onload = function () {
+
+
+
+
+    
     var graphData = [
         [169.9, 113.6], [169.5, 110.5], [169.2, 103.1], [165.7, 94.2],
         [167.1, 89.8], [166.7, 83.54], [166.5, 75.8], [162.7, 71.8],
@@ -55,19 +60,5 @@ window.onload = function () {
 
     
 
-    /* activity */
-    new RGraph.SVG.Activity({
-        id: 'activity-chart',
-        min: 0,
-        max: 10,
-        value: [24, 32, 45],
-        options: {
-            names: ['Richard', 'John', 'Frank'],
-            width: 40,
-            tooltips: '%{property:names[%{index}]}: %{value}%',
-            tooltipsCss: {
-                fontSize: '20pt'
-            }
-        }
-    }).grow();
+
 };
