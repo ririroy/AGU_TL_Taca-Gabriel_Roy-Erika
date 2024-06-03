@@ -83,6 +83,36 @@ window.onload = function () {
     }).wave();
 
     
-
+/* Graphique semi-circulaire */
+scp = new RGraph.SVG.SemiCircularProgress({
+    id: 'scp-container',
+    min: 0,
+    max: 200,
+    value: [50,30,60], // à changer
+    options: {
+        colors: ['rgba(0,255,0,0.25)',
+            'rgba(255,0,0,0.25)',
+            'rgba(255,255,0,0.25)'
+        ],
+        marginRight: 75,
+        marginLeft: 75,
+        marginTop: 50,
+        scale: true,
+        backgroundColor: '#E8FAE8',
+        backgroundColorOpacity: 1,
+        backgroundGrid: true,
+        scaleLabelsSize: 10,
+        scaleLabelsCount: 20,
+        scaleUnitsPost: '%',
+        backgroundGridRadialsCount: 20,
+        labelsCenterUnitsPost: '%',
+        labelsCenterDecimals: 1,
+        tooltips: 'Amount: %{value_formatted} boxes',
+        tooltipsCss: {
+            fontSize: '20pt',
+            fontWeight: 'bold'
+        }
+    }
+}).draw();
 
 };

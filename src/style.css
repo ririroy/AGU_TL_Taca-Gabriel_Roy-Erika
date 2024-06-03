@@ -1,4 +1,4 @@
-@import url(/animation.css);
+@import url(public/animation.css);
 
 
 
@@ -99,6 +99,7 @@ body {
 .graph__container-svg-01 {
   display: flex;
   align-items: center;
+  justify-content: center;
   height: 57rem;
   width: 80rem;
 }
@@ -161,10 +162,59 @@ z-index: 4;
   z-index: -5;
 }
 
-.bg__semi-circ{
-  width: 100%;
+.bg__semi-circ {
+  width: 100rem;
   display: flex;
+  position: absolute;
 }
+
+#scp-container {
+  top: -10rem;
+  right: -35rem;
+}
+
+.text-overlay {
+  position: absolute;
+}
+
+.flex_semi-circ {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Section SVG 04 */
+
+.bg_svg-04 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 51rem;
+  margin-top: -1rem;
+  z-index: 2;
+}
+
+/* Section graph 05 */
+
+.graph-05__section {
+  position: relative;
+  width: 100%;
+  height: auto;
+  z-index: 3;
+  margin-top: 5rem;
+}
+
+.bg-05 {
+  position: absolute;
+  width: 100%;
+  height: 60rem;
+  background-size: cover;
+  background-position: center;
+  z-index: 3;
+}
+
 
 /* Media Queries for larger screens 
 @media screen and (min-width: 768px) {

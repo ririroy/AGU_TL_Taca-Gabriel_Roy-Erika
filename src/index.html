@@ -124,13 +124,28 @@
             <section class="graph__semi-circ-01">
                 <img class="bg_goupilles" src="./public/bg_goupille.png" alt="fond de goupilles de cannettes">
                 <img class="bg__semi-circ" src="public/bg_demi-circle.png" alt="Fond rouge">
-                <div>
-                <div class="graph__semi-circ">
-
-                </div></div>
+                <div class="flex_semi-circ">
+                    <blockquote class="text-overlay">
+                        <h2>L'impact environnemental des emballages de soda</h2>
+                        <!-- Le texte n'est pas terminé -->
+                        <p>La consommation de soda n'a pas que des effets sur la santé; elle a aussi un gros impact sur l'envrionnement à cause des emballages, notamment les canettes en aluminium, de même que les bouteilles en plastique. Selon un rapport, Coca-Cola est toujours l'entreprise générant le plus de déchets plastiques dans l'environnement, et ce, depuis 2017. Malgré ses engagements à réduire l'utilisation de plastique d'ici trois ans, la situation ne s'améliore pas, le rapport indiquant que Coca-Cola reste le pire pollueur plastique au monde.</p>
+                    </blockquote>
+                    <div class="graph__semi-circ">
+                        <div>
+                            <canvas id="cvs" width="350" height="350">[No canvas support]</canvas>
+                        </div>
+                        <div style="float: right">
+                            <div style="width: 700px; height: 300px; display: inline-block; background-color: transparent" id="scp-container"></div>
+                        </div>
+                    </div>
+                </div>
             </section>
-            <section class="graph__svg-04"></section>
-            <section></section>
+            <section class="graph__svg-04">
+                <div class="bg_svg-04" style="background-image: url(public/bg_svg-04.png);" alt="Fond violet">
+            </section>
+            <section class="graph-05__section">
+                <div class="bg-05" style="background-image: url(public/bg_section-05.png);"></div>
+            </section>
             <section></section>
             <section></section>
         </main>
@@ -139,6 +154,7 @@
     <script src="./RGraph.svg.common.tooltips.js"></script>
     <script src="./RGraph.svg.pie.js"></script>
     <script src="./RGraph.svg.bar.js"></script>
+    <script src="./RGraph.svg.semicircularprogress.js"></script>
     <script src="./RGraph.svg.activity.js"></script>
     <script src="./main.js"></script>
 </body>
