@@ -105,7 +105,7 @@ window.onload = function () {
             scaleLabelsCount: 20,
             scaleLabelsOffsetr: 5,
             tooltips: '%{key}',
-            tooltipsFormattedKeyLabels: ['Richard','John','Lucy','Pob'],
+            tooltipsFormattedKeyLabels: ['20','3','45','18', '10', '4'],
             tooltipsFormattedUnitsPost: '%'
         }
     }).draw();
