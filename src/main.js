@@ -1,4 +1,30 @@
 window.onload = function () {
+/* GRAPH 1 */
+    pieData= [43.7,7.3,19.9,7.6,21.5];
+
+    new RGraph.SVG.Pie({
+        id: 'graph-svg-01',
+        data: pieData,
+        options: {
+            labels: ['Eau','Jus','Boissons gazeuses','Autres', 'Lait'],
+            shadow: true,
+            colorsStroke: 'rgba(0,0,0,1)',
+            linewidth: 0,
+            exploded: [,,25],
+            colors: ['#81B29A','#F4F1DE','#3D405B','#E07A5F','#fcc','#F2CC8F'],
+            tooltips: '%{key}',
+            tooltipsFormattedKeyLabels: ['Eau,','Jus','Boissons gazeuses','Autres','Lait'],
+            tooltipsFormattedUnitsPost: '%',
+            tooltipsCss: {
+                backgroundColor: '#333',
+                fontWeight: 'bold',
+                fontSize: '14pt',
+                opacity: 0.85
+            }
+        }
+    }).draw();
+
+/* GRAPH 2 */
     var graphData = [
         [169.9, 113.6], [169.5, 110.5], [169.2, 103.1], [165.7, 94.2],
         [167.1, 89.8], [166.7, 83.54], [166.5, 75.8], [162.7, 71.8],
@@ -53,6 +79,39 @@ window.onload = function () {
             }
         }
     }).wave();
+
+    /* GRAPH 3 */
+    new RGraph.SemiCircularProgress({
+        id: 'cvs-semi-circ',
+        min: 0,
+        max: 100,
+        value: [20,3,45,18,10,4],
+        options: {
+            colors: ['#64E572','#FF81CE','#D5B5E7','#53F7FC'],
+            centery: '+5',
+            width: 50,
+            radius: '-25',
+            backgroundGrid: true,
+            backgroundGridRadialsCount: 20,
+            colorsStroke:        'transparent',
+            labelsCenterIndex: 2,
+            labelsCenterSize:    25,
+            labelsCenterColor:   '#333',
+            labelsCenterUnitsPost:   '%',
+            scale: true,
+            scaleMax: 100,
+            scaleLabelsSize: 9,
+            scaleUnitsPost: '%',
+            scaleLabelsCount: 20,
+            scaleLabelsOffsetr: 5,
+            tooltips: '%{key}',
+            tooltipsFormattedKeyLabels: ['Richard','John','Lucy','Pob'],
+            tooltipsFormattedUnitsPost: '%'
+        }
+    }).draw();
+
+
+    /* GRAPH 4 */
 
     window.addEventListener('resize', function () {
         barChart.draw();
@@ -300,4 +359,42 @@ window.onload = function () {
         meter.value = value;
         meter.draw();
     });
+
+
+    /* GRAPH 6 */
+    var lineData = [
+        [15, 21, 32, 45, 70, 55, 42, 18],
+        [18, 20, 25, 40, 50, 52, 45, 35]
+    ];
+
+    function drawLineChart() {
+        new RGraph.Line({
+            id: 'line-chart',
+            data: lineData,
+            options: {
+                gutterLeft: 45,
+                gutterRight: 15,
+                labels: ['Q1', 'Q2', 'Q3', 'Q4', 'Q5', 'Q6', 'Q7', 'Q8'],
+                tooltips: [
+                    ['15 units', '21 units', '32 units', '45 units', '70 units', '55 units', '42 units', '18 units'],
+                    ['18 units', '20 units', '25 units', '40 units', '50 units', '52 units', '45 units', '35 units']
+                ],
+                colors: ['#F44336', '#2196F3'],
+                linewidth: 2,
+                filled: false,
+                filledColors: ['#F44336', '#2196F3']
+            }
+        }).draw();
+    }
+
+    drawLineChart();
+
+    function change() {
+        // Change the data
+        lineData[0][1] = Math.random() * 100;
+        lineData[1][3] = Math.random() * 100;
+
+        // Redraw the chart with the new data
+        drawLineChart();
+    }
 };
