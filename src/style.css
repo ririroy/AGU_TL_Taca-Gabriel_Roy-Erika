@@ -37,6 +37,7 @@ h1 {
 h2 {
   background-color: rgb(255, 255, 255, 0.5);
   border-radius: 20px;
+  text-align: center;
   width: 95%;
   padding-top: 2rem;
   padding-bottom: 2rem;
@@ -204,6 +205,7 @@ h3 {
   width: 100%;
   height: 100%;
   background-color: #C03B3B;
+  padding-bottom: 5rem;
 }
 
 .flex_semi-circ{
@@ -222,13 +224,16 @@ h3 {
 
 .blk__semi-circ{
   display: flex;
+  flex-direction: column;
+  width: 100%;
   margin-top: -0.2rem;
+  align-items: center;
 }
 
 .txt__semi-circ-ctrl{
   display: flex;
   flex-direction: column;
-  width: 100%;
+  width: 80%;
 }
 
 .semi-circ-text {
@@ -273,7 +278,7 @@ h3 {
 .blk_svg-04 {
   display: flex;
   color: rgb(46, 40, 40);
-  width: 100%;
+  width: 88%;
   margin-top: -.2rem;
 }
 
@@ -312,7 +317,7 @@ h3 {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 100%;
+  width: 90%;
   height: 60%;
 }
 
