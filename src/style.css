@@ -153,10 +153,8 @@ h3 {
 }
 
 #graph-svg-01 {
-  display: flex;
-  position: relative;
-  width:100%;
-  height: 10rem;
+  height: 15rem;
+  width: 35rem;
   margin: 0;
 }
 
@@ -506,6 +504,7 @@ canvas {
 /* SECTION GRAPHIQUE ANIMÉ 2 */
 .anim-graph-02 {
   display: flex;
+  align-items: center;
   flex-direction: column;
   height: 100rem;
   background-color: #BDDF76;
@@ -514,11 +513,53 @@ canvas {
 }
 
 #changeData {
+  padding: 10px 20px;
+  font-weight: bold;
+  text-align: center;
+  text-decoration: none;
+  cursor: pointer;
+  border: none;
+  border-radius: 5px;
+  width: 15rem;
 }
 
 
 footer{
-  height: 30rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 20rem;
+  width: 100%;
+  background-color: rgb(52, 2, 52);
+  color: white;
+}
+
+.footer-text-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 2rem;
+}
+
+.source-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  margin: 2rem;
+  gap: 1rem;
+  align-items: center;
+}
+
+.sources {
+  text-decoration: none;
+  color: rgb(192, 192, 192);
+}
+
+.sources:hover {
+  color: white;
+}
+
+.src-text {
+  color: white;
 }
 
 @media screen and (min-width: 1024px) {
