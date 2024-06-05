@@ -326,23 +326,23 @@ window.onload = function () {
         document.querySelectorAll('ul li').forEach(li => li.style.display = 'none');
 
         if (value <= 120) {
-            document.querySelector('.li-120').style.display = 'block';
+            document.querySelector('.li-120').style.display = 'flex';
         } else if (value <= 130) {
-            document.querySelector('.li-130').style.display = 'block';
+            document.querySelector('.li-130').style.display = 'flex';
         } else if (value <= 140) {
-            document.querySelector('.li-140').style.display = 'block';
+            document.querySelector('.li-140').style.display = 'flex';
         } else if (value <= 150) {
-            document.querySelector('.li-150').style.display = 'block';
+            document.querySelector('.li-150').style.display = 'flex';
         } else if (value <= 160) {
-            document.querySelector('.li-160').style.display = 'block';
+            document.querySelector('.li-160').style.display = 'flex';
         } else if (value <= 170) {
-            document.querySelector('.li-170').style.display = 'block';
+            document.querySelector('.li-170').style.display = 'flex';
         } else if (value <= 180) {
-            document.querySelector('.li-180').style.display = 'block';
+            document.querySelector('.li-180').style.display = 'flex';
         } else if (value <= 190) {
-            document.querySelector('.li-190').style.display = 'block';
-        } else if (value <= 200) { // Updated to ensure 200 is included
-            document.querySelector('.li-200').style.display = 'block';
+            document.querySelector('.li-190').style.display = 'flex';
+        } else if (value <= 200) {
+            document.querySelector('.li-200').style.display = 'flex';
         }
     });
 
