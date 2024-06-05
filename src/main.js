@@ -1,20 +1,20 @@
 window.onload = function () {
-/* GRAPH 1 */
-    pieData= [43.7,7.3,19.9,7.6,21.5];
+    const pieData = [43.7, 7.3, 19.9, 7.6, 21.5];
 
     new RGraph.SVG.Pie({
         id: 'graph-svg-01',
         data: pieData,
         options: {
-            labels: ['Eau','Jus','Boissons gazeuses','Autres', 'Lait'],
+            labels: ['Eau', 'Jus', 'Boissons gazeuses', 'Autres', 'Lait'],
             shadow: true,
             colorsStroke: 'rgba(0,0,0,1)',
             linewidth: 0,
-            exploded: [,,25],
-            colors: ['#81B29A','#F4F1DE','#3D405B','#E07A5F','#fcc','#F2CC8F'],
+            exploded: [0, 0, 25, 0, 0],
+            colors: ['#81B29A', '#F4F1DE', '#3D405B', '#E07A5F', '#fcc'],
             tooltips: '%{key}',
-            tooltipsFormattedKeyLabels: ['Eau,','Jus','Boissons gazeuses','Autres','Lait'],
+            tooltipsFormattedKeyLabels: ['Eau', 'Jus', 'Boissons gazeuses', 'Autres', 'Lait'],
             tooltipsFormattedUnitsPost: '%',
+            responsive: true,
             tooltipsCss: {
                 backgroundColor: '#333',
                 fontWeight: 'bold',
@@ -23,7 +23,6 @@ window.onload = function () {
             }
         }
     }).draw();
-
 /* GRAPH 2 */
     var graphData = [
         [169.9, 113.6], [169.5, 110.5], [169.2, 103.1], [165.7, 94.2],
