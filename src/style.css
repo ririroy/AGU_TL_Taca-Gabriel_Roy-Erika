@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap');
 
-@import url(/animation.css);
+@import url(public/animation.css);
 
 
 /* Body Styles */
@@ -503,7 +503,6 @@ ul {
 
 canvas {
   background-color: transparent;
-
 }
 
 /* SECTION GRAPHIQUE ANIMÉ 2 */
@@ -511,23 +510,20 @@ canvas {
   display: flex;
   align-items: center;
   flex-direction: column;
-  height: 100rem;
+  height: 50rem;
   background-color: #BDDF76;
   -webkit-box-shadow: 5px 5px 15px 5px rgba(0, 0, 0, 0.32);
   box-shadow: 5px 5px 15px 5px rgba(0, 0, 0, 0.32);
 }
 
-#changeData {
-  padding: 10px 20px;
-  font-weight: bold;
-  text-align: center;
-  text-decoration: none;
-  cursor: pointer;
-  border: none;
-  border-radius: 5px;
-  width: 15rem;
+.sect-06-text {
+  width: 60rem;
+  height: 10rem;
 }
 
+.sect-06-text {
+  margin-left: 5rem;
+}
 
 footer{
   display: flex;

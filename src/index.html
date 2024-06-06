@@ -15,7 +15,7 @@
                 <div class="div__intro">
                     <h1>Les Américains et leur passion pour les sodas</h1>
                     <div class="txt_intro">
-                        <img class="img__soda" src="/soda_can.png" alt="Cannette tournante">
+                        <img class="img__soda" src="public/soda_can.png" alt="Cannette tournante">
                         <div class="paper">
                             <p>Aux États-Unis, la consommation de soda est profondément ancrée dans la culture et le
                                 mode de vie des Américains. Depuis l'invention des premières boissons gazeuses au XIXe
@@ -124,7 +124,6 @@
                                 le transport (18,15%), le supermarché et la distribution (10,31%), ainsi que la consommation
                                 (2,83%). Ces chiffres démontrent l'impact environnemental considérable du soda à travers
                                 toutes les étapes de sa production jusqu'à sa distribution.</p>
-                            <!-- source: https://impactco2.fr/boisson/soda -->
                         </div>
                     </blockquote>
                     <div class="semi-circ_container">
@@ -191,7 +190,7 @@
                             <div class="graph__anim">
                                 <div style="display: flex; flex-direction: column; justify-content: center; width: 100%;">
                                     <canvas id="cvs" width="500" height="250"></canvas>
-                                    <img class="bg__cerveau" src="/graph_anime_bg.png" alt="background cerveau">
+                                    <img class="bg__cerveau" src="public/graph_anime_bg.png" alt="background cerveau">
                                     <button id="toggleGradientBtn" style="width: 10rem; align-self: center;"
                                         onclick="toggleGradient()">Pression artérielle</button>
                                 </div>
@@ -216,13 +215,14 @@
             </section>
             <section class="anim-graph-02">
                 <blockquote>
-                    <p></p>
+                    <div class="title-container">
+                        <h2>Évolution  de la consommation de sodas aux États-Unis: déclin du soda et émergence de nouvelles préoccupations</h2>
+                    </div>
+                    <p class="sect-06-text paper">Une analyse récente des tendances de la consommation de soda aux États-Unis révèle que malgré un déclin apparent de cette boisson, d'autres sucrées ont gagné en popularité et maintiennent un niveau global élevé de consommation de boissons sucrées. Bien que la consommation de soda ait diminuée depuis le début des années 2000, cette baisse a été compensée par une augmentation de la consommation d'autres boissons sucrées telles que le thé sucré et les boissons énergisantes. On dit qu'en 2012, les Américains consommaient en moyenne près de 200 calories de boissons sucrées par jour! Le soda reste tout de même l'une des principales menaces pour la santé publique aux États-Unis.</p>
                 </blockquote>
                 <div class="line-chart-container">
                     <canvas id="line-chart" width="500" height="250"></canvas>
                 </div>
-                <!-- Bouton pour changer les données du graphique 6 -->
-                <button id="changeData" onclick="change()">Changer les données</button>
             </section>
         </main>
     </div>
@@ -240,7 +240,7 @@
             <p><a href="https://www.cdc.gov/nutrition/data-statistics/sugar-sweetened-beverages-intake.html" class="sources">Section 4</a></p>
             <p><a href="https://tinyurl.com/whoInfos" class="sources">Section 5</a></p>
             <p><a href="https://ici.radio-canada.ca/nouvelle/697688/hypertension-sucre-plus-dangereux-sel-british-medical-journal" class="sources">Section 5</a></p>
-            <p><a href="" class="sources">Section 6</a></p>
+            <p><a href="https://www.healthyfoodamerica.org/soda_may_be_flat_but_consumption_of_other_sugary_drinks_makes_up_the_difference_our_data_survey_shows" class="sources">Section 6</a></p>
             <p><a href="https://www.youtube.com" class="sources">Youtube</a></p>
         </div>
     </footer>

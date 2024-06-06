@@ -362,10 +362,10 @@ window.onload = function () {
 
     /* GRAPH 6 */
     var lineData = [
-        [15, 21, 32, 45, 70, 55, 42, 18],
-        [18, 20, 25, 40, 50, 52, 45, 35]
+        [15, null, null, null, null, null, null, null], // Commencez avec une seule valeur et des valeurs null pour le reste
+        [18, null, null, null, null, null, null, null]
     ];
-
+    
     function drawLineChart() {
         new RGraph.Line({
             id: 'line-chart',
@@ -385,15 +385,24 @@ window.onload = function () {
             }
         }).draw();
     }
-
-    drawLineChart();
-
-    function change() {
-        // Change the data
-        lineData[0][1] = Math.random() * 100;
-        lineData[1][3] = Math.random() * 100;
-
-        // Redraw the chart with the new data
-        drawLineChart();
+    
+    function animateLineChart() {
+        var dataIndex = 1; // Commencez à ajouter des points à partir du deuxième index
+    
+        setInterval(function() {
+            // Ajoutez un nouveau point à chaque intervalle
+            if (dataIndex < lineData[0].length) {
+                lineData[0][dataIndex] = Math.random() * 100;
+                lineData[1][dataIndex] = Math.random() * 100;
+    
+                // Redessinez le graphique avec les nouvelles données
+                drawLineChart();
+    
+                dataIndex++; // Passez au prochain index de données
+            }
+        }, 1000); // Ajoutez un point toutes les 1 seconde
     }
+    
+    drawLineChart();
+    animateLineChart();
 };
