@@ -362,11 +362,15 @@ window.onload = function () {
 
     /* GRAPH 6 */
     var lineData = [
-        [15, null, null, null, null, null, null, null], // Commencez avec une seule valeur et des valeurs null pour le reste
+        [15, null, null, null, null, null, null, null],
         [18, null, null, null, null, null, null, null]
     ];
     
     function drawLineChart() {
+        var canvas = document.getElementById('line-chart');
+        var context = canvas.getContext('2d');
+        context.clearRect(0, 0, canvas.width, canvas.height);
+        
         new RGraph.Line({
             id: 'line-chart',
             data: lineData,
@@ -381,26 +385,27 @@ window.onload = function () {
                 colors: ['#F44336', '#2196F3'],
                 linewidth: 2,
                 filled: false,
-                filledColors: ['#F44336', '#2196F3']
+                filledColors: ['#F44336', '#2196F3'],
+                animation: true
             }
         }).draw();
     }
     
     function animateLineChart() {
-        var dataIndex = 1; // Commencez à ajouter des points à partir du deuxième index
+        var dataIndex = 1;
     
-        setInterval(function() {
-            // Ajoutez un nouveau point à chaque intervalle
+        var interval = setInterval(function() {
             if (dataIndex < lineData[0].length) {
                 lineData[0][dataIndex] = Math.random() * 100;
                 lineData[1][dataIndex] = Math.random() * 100;
     
-                // Redessinez le graphique avec les nouvelles données
                 drawLineChart();
     
-                dataIndex++; // Passez au prochain index de données
+                dataIndex++;
+            } else {
+                clearInterval(interval);
             }
-        }, 1000); // Ajoutez un point toutes les 1 seconde
+        }, 2000);
     }
     
     drawLineChart();
